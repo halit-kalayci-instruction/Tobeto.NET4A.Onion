@@ -1,5 +1,5 @@
 using Persistence;
-
+using Application;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,6 +9,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddPersistenceServices();
+builder.Services.AddApplicationServices();
 
 
 var app = builder.Build();
@@ -26,4 +27,3 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
-// 2:20
